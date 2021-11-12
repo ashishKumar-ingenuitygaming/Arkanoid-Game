@@ -2,25 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>2D Breakout Game - JavScript</title>
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Germania+One">
-    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <title>Paint</title>
 </head>
 <body>
-    <div class="sound">
-        <img src="img/SOUND_ON.png" alt="" id="sound">
+    <div class="wrapper">
+
+        <div class="toolbar">
+            <a class="selected" href="#" id="open" onclick="OpenImage()"><img src="open-icon.png"></a>
+            <a href="#" id="save" onclick="SaveImage()"><img src="save-icon.png"></a>
+            <a href="#" id="brush" onclick="ChangeTool('brush')"><img src="brush-icon.png"></a>
+            <a href="#" id="line" onclick="ChangeTool('line')"><img src="line-icon.png"></a>
+            <a href="#" id="rectangle" onclick="ChangeTool('rectangle')"><img src="rectangle-icon.png"></a>
+            <a href="#" id="circle" onclick="ChangeTool('circle')"><img src="circle-icon.png"></a>
+            <a href="#" id="ellipse" onclick="ChangeTool('ellipse')"><img src="ellipse-icon.png"></a>
+            <a href="#" id="polygon" onclick="ChangeTool('polygon')"><img src="polygon-icon.png"></a>
+
+        </div><br>
+
+        <canvas id="my-canvas" width="600" height="600"></canvas>
+
+        <div id="img-data-div">
+        
+
+        </div>
+
     </div>
-    
-    <div id="gameover">
-        <img src="img/youwon.png" alt="" id="youwon">
-        <img src="img/gameover.png" alt="" id="youlose">
-        <div id="restart">Play Again!</div>
-    </div>
-   
-    <canvas id="breakout" width="400" height="500"></canvas>
-    
-    <script src="components.js"></script>
-    <script src="game.js"></script>
+
+
+    <script src="script.js"></script>
 </body>
 </html>
